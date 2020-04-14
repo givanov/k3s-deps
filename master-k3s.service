@@ -7,7 +7,6 @@ After=network-online.target
 Type=notify
 EnvironmentFile=/etc/systemd/system/k3s.service.env
 ExecStart=/usr/local/bin/k3s server \
-  --node-external-ip ${K3S_NODE_EXTERNAL_IP} \
   --node-label CriticalAddonsOnly=true \
   --node-label georgi.space/node-id=${K3S_NODE_ID_LABEL} \
   --node-taint CriticalAddonsOnly=true:NoExecute \
